@@ -1,6 +1,6 @@
 {
   "name": "moensun-vue-form-validator",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "vue form validator",
   "main": "index.js",
   "scripts": {
