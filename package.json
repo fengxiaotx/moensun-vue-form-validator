@@ -1,0 +1,23 @@
+{
+  "name": "moensun-vue-form-validator",
+  "version": "1.0.0",
+  "description": "vue form validator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fengxiaotx/moensun-vue-form-validator.git"
+  },
+  "keywords": [
+    "vue",
+    "form-validator"
+  ],
+  "author": "Bane.Shi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fengxiaotx/moensun-vue-form-validator/issues"
+  },
+  "homepage": "https://github.com/fengxiaotx/moensun-vue-form-validator#readme"
+}
