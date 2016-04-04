@@ -104,7 +104,7 @@ function install(Vue,options) {
 
 		util.formFieldInit(vmScope,_fieldKey);
 		vmScope.$watch(_watchKey,function (newVal, oldVal) {
-			let result = validates.maxLength(newVal,options.min);
+			let result = validates.maxLength(newVal,options.maxLength);
 			util.updateValid(vmScope,_fieldKey,"maxLength",result,el,true);
 		},{
 			immediate: true
@@ -122,7 +122,7 @@ function install(Vue,options) {
 
 		util.formFieldInit(vmScope,_fieldKey);
 		vmScope.$watch(_watchKey,function (newVal, oldVal) {
-			let result = validates.minLength(newVal,options.min);
+			let result = validates.minLength(newVal,options.minLength);
 			util.updateValid(vmScope,_fieldKey,"minLength",result,el,true);
 		},{
 			immediate: true
