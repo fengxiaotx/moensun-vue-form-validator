@@ -48,7 +48,7 @@ function updateValid(_vm,_key,_item,_value,_el,_operateElement) {
 
 	let valid = true;
 	for(let item in _vm.$get(_key+".$error")){
-		if(!_vm.$get(_key+".$error."+item)){
+		if(_vm.$get(_key+".$error."+item) === true){
 			valid = false;
 			break;
 		}
