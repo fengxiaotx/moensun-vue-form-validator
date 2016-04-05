@@ -44,7 +44,7 @@ function formFieldInit(_vm,_key) {
 }
 
 function updateValid(_vm,_key,_item,_value,_el,_operateElement) {
-	_vm.$set(_key+".$error."+_item,_value);
+	_vm.$set(_key+".$error."+_item,!_value);
 
 	let valid = true;
 	for(let item in _vm.$get(_key+".$error")){

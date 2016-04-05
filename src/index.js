@@ -19,7 +19,8 @@ function install(Vue,options) {
 			let vm = this.vm;
 			let el = this.el;
 			let formName = el.getAttribute("name");
-			vm.$set("formName",formName);
+			//vm.$set("formName",formName);
+			vm["formName"]=formName;
 			vm.$set(formName,{
 				"$valid":true,
 				"$invalid":false
