@@ -1,8 +1,8 @@
 {
   "name": "moensun-vue-form-validator",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "vue form validator",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,5 +19,15 @@
   "bugs": {
     "url": "https://github.com/fengxiaotx/moensun-vue-form-validator/issues"
   },
-  "homepage": "https://github.com/fengxiaotx/moensun-vue-form-validator#readme"
+  "homepage": "https://github.com/fengxiaotx/moensun-vue-form-validator#readme",
+  "dependencies": {
+    "babel-core": "^6.7.4",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-runtime": "^6.6.0",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "clean-webpack-plugin": "^0.1.8",
+    "vue": "^1.0.20",
+    "webpack": "^1.12.14"
+  }
 }
