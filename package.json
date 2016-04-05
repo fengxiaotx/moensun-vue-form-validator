@@ -1,8 +1,8 @@
 {
   "name": "moensun-vue-form-validator",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "vue form validator",
-  "main": "dist/index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

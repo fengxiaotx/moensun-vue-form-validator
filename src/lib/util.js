@@ -6,8 +6,7 @@
  * Time: 0:02
  */
 'use strict';
-import Vue from "vue";
-import Config from "./config";
+let Vue = require("vue");
 
 function getWatchKey(Vue,obj,options) {
 	let el = obj.el;

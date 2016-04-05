@@ -6,9 +6,8 @@
  * Time: 23:13
  */
 'use strict';
-import util from "./lib/util";
-import validates from "./lib/validates";
-import Config from "./lib/config";
+let util = require("./lib/util");
+let validates = require("./lib/validates");
 
 module.exports = install;
 
