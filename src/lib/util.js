@@ -14,9 +14,9 @@ function getWatchKey(Vue,obj,options) {
 	if(expression){
 		return expression;
 	}else {
-/*		let arg = obj.descriptor.arg;
-		let attr = obj.descriptor.attr;
-		return attr.substr(attr.indexOf(arg));*/
+		/*		let arg = obj.descriptor.arg;
+		 let attr = obj.descriptor.attr;
+		 return attr.substr(attr.indexOf(arg));*/
 		return options.key;
 	}
 }
@@ -38,7 +38,7 @@ function formFieldInit(_vm,_key) {
 		"$invalid":false,
 		"$valid":true,
 		"$pristine":true,
-		"$dirty":true,
+		"$dirty":false,
 		"$error":{}
 	});
 }
@@ -55,11 +55,17 @@ function updateValid(_vm,_key,_item,_value,_el,_operateElement) {
 	}
 	_vm.$set(_key+".$invalid",!valid);
 	_vm.$set(_key+".$valid",valid);
-	if(_operateElement){
-		if(valid){
-			Vue.util.removeClass(_el,"invalid");
-			Vue.util.addClass(_el,"valid");
-		}else {
+
+	if( _vm.$get(_key+".$pristine") && _operateElement ){
+		_vm.$set(_key+".$pristine",false);
+		_vm.$set(_key+".$dirty",true);
+	}
+
+	if(valid){
+		Vue.util.removeClass(_el,"invalid");
+		Vue.util.addClass(_el,"valid");
+	}else {
+		if(_vm.$get(_key+".$dirty")){
 			Vue.util.removeClass(_el,"valid");
 			Vue.util.addClass(_el,"invalid");
 		}
