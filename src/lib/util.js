@@ -11,8 +11,11 @@ let Vue = require("vue");
 function getWatchKey(Vue,obj,options) {
 	let el = obj.el;
 	let expression = el.getAttribute((Vue.config.prefix?Vue.config.prefix:'v-') + 'model');
+	let vmodel = el.__v_model;
 	if(expression){
 		return expression;
+	}else if(vmodel.expression){
+		return vmodel.expression;
 	}else {
 		/*		let arg = obj.descriptor.arg;
 		 let attr = obj.descriptor.attr;
